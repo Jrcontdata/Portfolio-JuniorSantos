@@ -6,7 +6,7 @@
 const PERFIL = {
   nome: "Junior Rabelo dos Santos",
   titulo: "Análise de processos e dados aplicada à indústria",
-  resumo: "Venho de recebimento fiscal na indústria farmacêutica e de suporte de usuabilidade de sistemas. Estou construindo uma base prática em análise de dados e processos (Excel, SQL, Power BI, Python, BPMN), com foco em PCP, produção e logística.",
+  resumo: "Profissional formado em Ciências Contábeis, com trajetória nas áreas contábil e fiscal, indústria farmacêutica e suporte funcional a sistemas de gestão. Minha experiência reúne conhecimentos em rotinas administrativas e fiscais, análise documental, utilização de sistemas ERP e atendimento a usuários de soluções tecnológicas. Iniciei minha carreira na área contábil, atuando como Analista Contábil e desenvolvendo experiência em escrituração, análise de lançamentos e rotinas fiscais, incluindo operações do Simples Nacional. Posteriormente, ingressei no segmento farmacêutico, na área de Recebimento Fiscal, com atuação na análise de pedidos de compra e notas fiscais, liberação de materiais produtivos e improdutivos para recebimento físico e interface com as áreas de PCP, Suprimentos e Logística, utilizando o SAP S/4HANA. Atualmente, atuo no suporte funcional de sistemas desenvolvidos para Conselhos de Fiscalização Profissional, orientando usuários quanto à utilização das funcionalidades, analisando inconsistências relatadas, realizando testes em bases de clientes e direcionando demandas às equipes de desenvolvimento. Encontro-me em processo de direcionamento profissional para as áreas de Processos, PCP, Planejamento e Análise de Dados, investindo no desenvolvimento de conhecimentos conceituais e técnicos, no estudo de ferramentas e na resolução de estudos de caso relacionados a essas frentes. Busco uma oportunidade que possibilite transformar essa preparação em experiência prática, aproveitando minha vivência profissional anterior e ampliando minha atuação em ambientes orientados a processos, dados e resultado operacional.",
   vagas: ["Analista Industrial Jr", "Analista de PCP Jr", "Analista de Produção Jr", "Analista de Logística Jr"],
   local: "Luziânia-GO. Disponível para oportunidades presenciais ou híbridas na região.",
   email: "jr.contdata.ti@gmail.com",
@@ -16,13 +16,13 @@ const PERFIL = {
 
 const EXPERIENCIAS = [
   { titulo: "Recebimento fiscal (indústria farmacêutica)",
-    texto: "Análise de dados de notas fiscais de matéria-prima, embalagem, material de consumo e manutenção e pedidos de compra para liberar o recebimento físico. Interface com time de suprimentos, PCP e Logistica. Análise e apresentação de indicadores." },
+    texto: "Análise de dados de notas fiscais de matéria-prima, embalagem, materiais de consumo e manutenção, bem como de pedidos de compra, para liberação do recebimento físico. Interface com as equipes de Suprimentos, PCP e Logística. Análise e apresentação de indicadores." },
   { titulo: "Suporte de usabilidade de sistemas",
-    texto: "Suporte de usuabilidade dos sistemas aos cliente, documentação, levantamento de requisitos e interface com a equipe de desenvolvimento na análise de duvidas e erros no sistema apresentados pelos clientes." },
+    texto: "Suporte à usabilidade dos sistemas aos clientes, documentação, levantamento de requisitos e interface com a equipe de desenvolvimento na análise de dúvidas e erros apresentados pelos clientes no sistema." },
   { titulo: "Contabilidade",
     texto: "Análise de dados de notas fiscais, regularização de pendências, lançamento de despesas e receitas." },
   { titulo: "Conferência de mercadorias",
-    texto: "Análise de dados de notas fiscais, conciliação de quantidades recebidas com nota fiscal, identificação de divergências, organização e controle do estoque." },
+    texto: "Análise de dados de notas fiscais, conciliação das quantidades recebidas com as notas fiscais, identificação de divergências, organização e controle de estoque." },
 
    
 ];
