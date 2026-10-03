@@ -4,23 +4,27 @@
    ===================================================== */
 
 const PERFIL = {
-  nome: "Seu Nome",
+  nome: "Junior Rabelo dos Santos",
   titulo: "Análise de processos e dados aplicada à indústria",
-  resumo: "Venho de recebimento fiscal na indústria farmacêutica e de suporte a sistemas. Estou construindo uma base prática em análise de dados e processos (Excel, SQL, Power BI, Python, BPMN), com foco em PCP, produção e logística.",
+  resumo: "Venho de recebimento fiscal na indústria farmacêutica e de suporte de usuabilidade de sistemas. Estou construindo uma base prática em análise de dados e processos (Excel, SQL, Power BI, Python, BPMN), com foco em PCP, produção e logística.",
   vagas: ["Analista Industrial Jr", "Analista de PCP Jr", "Analista de Produção Jr", "Analista de Logística Jr"],
   local: "Luziânia-GO. Disponível para oportunidades presenciais ou híbridas na região.",
-  email: "seuemail@exemplo.com",
-  linkedin: "https://www.linkedin.com/in/seu-perfil",
-  github: "https://github.com/seu-usuario"
+  email: "jr.contdata.ti@gmail.com",
+  linkedin: "https://www.linkedin.com/in/junior-santos-47a08662/",
+  github: "https://github.com/Jrcontdata"
 };
 
 const EXPERIENCIAS = [
   { titulo: "Recebimento fiscal (indústria farmacêutica)",
-    texto: "Análise de notas fiscais de matéria-prima, embalagem, material de consumo e manutenção, confrontadas com pedidos de compra para liberar o recebimento físico." },
+    texto: "Análise de dados de notas fiscais de matéria-prima, embalagem, material de consumo e manutenção e pedidos de compra para liberar o recebimento físico. Interface com time de suprimentos, PCP e Logistica. Análise e apresentação de indicadores." },
   { titulo: "Suporte de usabilidade de sistemas",
-    texto: "Análise de erros, documentação e comunicação com a equipe de desenvolvimento, buscando a causa do problema e não só o sintoma." },
-  { titulo: "Contabilidade e conferência de mercadorias",
-    texto: "Rigor com números, conciliação de quantidades com nota fiscal e identificação de divergências." }
+    texto: "Suporte de usuabilidade dos sistemas aos cliente, documentação, levantamento de requisitos e interface com a equipe de desenvolvimento na análise de duvidas e erros no sistema apresentados pelos clientes." },
+  { titulo: "Contabilidade",
+    texto: "Análise de dados de notas fiscais, regularização de pendências, lançamento de despesas e receitas." }
+  { titulo: "Conferência de mercadorias",
+    texto: "Análise de dados de notas fiscais, conciliação de quantidades recebidas com nota fiscal, identificação de divergências, organização e controle do estoque." }
+
+   
 ];
 
 /* -----------------------------------------------------
