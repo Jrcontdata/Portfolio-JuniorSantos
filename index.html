@@ -55,7 +55,7 @@ let atual="all";
 
 /* Topo e resumo */
 document.title=PERFIL.nome+": portfólio";
-$("logo").textContent=PERFIL.nome;
+$("logo").textContent=PERFIL.nome.split(" ").filter(w=>w.length>3).map(w=>w[0]).join("");
 $("nome").textContent=PERFIL.nome;
 $("titulo").textContent=PERFIL.titulo;
 const paras=Array.isArray(PERFIL.resumo)?PERFIL.resumo:String(PERFIL.resumo||"").split(/\n{2,}/);
