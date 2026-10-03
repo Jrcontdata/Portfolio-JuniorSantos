@@ -5,7 +5,7 @@
 
 const PERFIL = {
   nome: "Junior Rabelo dos Santos",
-  titulo: "Análise de processos e dados aplicada à indústria",
+  titulo: "Análise de dados e processos para PCP, produção e logística",
   resumo: "Profissional formado em Ciências Contábeis, com experiência nas áreas contábil e fiscal, indústria farmacêutica e suporte funcional a sistemas. Iniciei minha trajetória com escrituração, análise de lançamentos e rotinas fiscais, incluindo operações do Simples Nacional. Na indústria farmacêutica, atuei em Recebimento Fiscal, realizando análise de pedidos de compra e notas fiscais, liberação de materiais para recebimento físico e interface com PCP, Suprimentos e Logística, utilizando o SAP S/4HANA. Atualmente, atuo com suporte à usabilidade de sistemas desenvolvidos para Conselhos de Fiscalização Profissional, realizando atendimento aos usuários, análise de inconsistências, testes funcionais em bases de clientes e encaminhamento de demandas às equipes de desenvolvimento.Como direcionamento profissional, venho me preparando para estar apto a receber oportunidade nas áreas de Análise de Dados, PCP,  Processos e Logística, por meio de estudos de conceitos, ferramentas e cases práticos. Busco uma oportunidade para transformar essa preparação em experiência profissional, aproveitando minha vivência com sistemas, informações, rotinas administrativas e ambiente industrial.",
   vagas: ["Analista Industrial Jr", "Analista de PCP Jr", "Analista de Produção Jr", "Analista de Logística Jr"],
   local: "Luziânia-GO. Disponível para oportunidades presenciais ou híbridas na região.",
