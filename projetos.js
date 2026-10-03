@@ -20,9 +20,9 @@ const EXPERIENCIAS = [
   { titulo: "Suporte de usabilidade de sistemas",
     texto: "Suporte de usuabilidade dos sistemas aos cliente, documentação, levantamento de requisitos e interface com a equipe de desenvolvimento na análise de duvidas e erros no sistema apresentados pelos clientes." },
   { titulo: "Contabilidade",
-    texto: "Análise de dados de notas fiscais, regularização de pendências, lançamento de despesas e receitas." }
+    texto: "Análise de dados de notas fiscais, regularização de pendências, lançamento de despesas e receitas." },
   { titulo: "Conferência de mercadorias",
-    texto: "Análise de dados de notas fiscais, conciliação de quantidades recebidas com nota fiscal, identificação de divergências, organização e controle do estoque." }
+    texto: "Análise de dados de notas fiscais, conciliação de quantidades recebidas com nota fiscal, identificação de divergências, organização e controle do estoque." },
 
    
 ];
