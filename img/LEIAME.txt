@@ -1,0 +1,2 @@
+Coloque aqui as imagens dos projetos e dos certificados (png, jpg ou webp).
+Depois indique o caminho no projetos.js, por exemplo: imagem: "img/bpmn-recebimento.png"
