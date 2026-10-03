@@ -18,7 +18,7 @@ const EXPERIENCIAS = [
   { titulo: "Recebimento fiscal (indústria farmacêutica)",
     texto: "Análise de dados de notas fiscais de matéria-prima, embalagem, materiais de consumo e manutenção, bem como de pedidos de compra, para liberação do recebimento físico. Interface com as equipes de Suprimentos, PCP e Logística. Análise e apresentação de indicadores." },
   { titulo: "Suporte de usabilidade de sistemas",
-    texto: "Atendimento aos usuarios dos sistemas, suporte à usabilidade dos sistemas, documentação de demanda, levantamento de requisitos de melhorias no sistema e interface com a equipe de desenvolvimento na análise de dúvidas e erros nos sstemas, apresentados pelos usuários." },
+    texto: "Atendimento aos usuários dos sistemas, suporte à usabilidade dos sistemas, documentação de demandas, levantamento de requisitos para melhorias no sistema e interface com a equipe de desenvolvimento na análise de dúvidas e erros apresentados pelos usuários." },
   { titulo: "Contabilidade",
     texto: "Análise de dados de notas fiscais, regularização de pendências, lançamento de despesas e receitas." },
   { titulo: "Conferência de mercadorias",
