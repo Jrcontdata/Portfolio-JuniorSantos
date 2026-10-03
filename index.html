@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfólio: análise de processos e dados para indústria</title>
+<meta name="description" content="Portfólio de análise de dados e processos aplicados a PCP, produção e logística.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="w">
+<header>
+  <p class="nome" id="nome"></p>
+  <h1 id="titulo"></h1>
+  <p class="lead" id="resumo"></p>
+  <div class="chips" id="vagas"></div>
+  <div class="cta"><a class="btn p" href="#projetos">Ver projetos</a><a class="btn" href="#contato">Contato</a></div>
+</header>
+
+<section id="sobre">
+  <h2>Experiência</h2>
+  <p class="sub">Fluxos reais que alimentam a produção.</p>
+  <div class="about" id="exp"></div>
+</section>
+
+<section id="projetos">
+  <h2>Projetos e conhecimentos</h2>
+  <p class="sub">Cada item mostra o status real. Os cases combinam ferramentas e conceitos.</p>
+  <div class="filters" id="f" role="group" aria-label="Filtrar projetos"></div>
+  <div class="grid" id="g"></div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <div class="cta" id="contatos"></div>
+</section>
+<footer id="rodape"></footer>
+</div>
+
+<script src="projetos.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TIPOS={all:"Todos",case:"Cases",ferramenta:"Por ferramenta",processo:"Processos",industria:"Indústria"};
+const ST={ok:["Concluído","ok"],wip:["Em construção","wip"],todo:["Planejado","todo"]};
+let atual="all";
+
+document.title=PERFIL.nome+": portfólio de análise de processos e dados";
+$("nome").textContent=PERFIL.nome;
+$("titulo").textContent=PERFIL.titulo;
+$("resumo").textContent=PERFIL.resumo;
+$("vagas").innerHTML=PERFIL.vagas.map(v=>`<span class="chip">${esc(v)}</span>`).join("");
+$("exp").innerHTML=EXPERIENCIAS.map(e=>`<div class="card"><h3>${esc(e.titulo)}</h3><p>${esc(e.texto)}</p></div>`).join("");
+$("contatos").innerHTML=`<a class="btn p" href="mailto:${esc(PERFIL.email)}">${esc(PERFIL.email)}</a><a class="btn" href="${esc(PERFIL.linkedin)}" rel="noopener">LinkedIn</a><a class="btn" href="${esc(PERFIL.github)}" rel="noopener">GitHub</a>`;
+$("rodape").textContent=PERFIL.local;
+
+function render(){
+  $("f").innerHTML=Object.entries(TIPOS).map(([k,v])=>`<button data-k="${k}" aria-pressed="${k===atual}">${v}</button>`).join("");
+  $("g").innerHTML=ITEMS.filter(i=>atual==="all"||i.tipo===atual).map(i=>`
+  <article class="card ${i.tipo==="case"?"case":""}">
+    <span class="st ${ST[i.status][1]}">${ST[i.status][0]}</span>
+    <h3>${esc(i.titulo)}</h3>
+    ${i.imagem?`<img src="${esc(i.imagem)}" alt="${esc(i.alt||i.titulo)}" loading="lazy">`:""}
+    <p>${esc(i.descricao)}</p>
+    <div class="tags">${(i.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+    ${i.etapas?`<details><summary>Etapas</summary><ul>${i.etapas.map(e=>`<li>${esc(e)}</li>`).join("")}</ul></details>`:""}
+    ${(i.links&&i.links.length)?`<div class="links">${i.links.map(l=>`<a class="btn" href="${esc(l.url)}" rel="noopener">${esc(l.texto)}</a>`).join("")}</div>`:""}
+  </article>`).join("");
+}
+$("f").addEventListener("click",e=>{const k=e.target.dataset.k;if(k){atual=k;render()}});
+render();
+</script>
+</body>
+</html>
