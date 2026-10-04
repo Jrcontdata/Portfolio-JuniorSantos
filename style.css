@@ -81,3 +81,23 @@ details.et ul{margin:8px 0 0;padding-left:20px;color:var(--mute);font-size:.93re
 .curso a{color:var(--acc);font-weight:600;font-size:.9rem}
 
 footer{padding:36px 0 48px;color:var(--mute);border-top:1px solid var(--line);margin-top:48px;font-size:.92rem}
+/* Esteira de habilidades */
+.esteira-topo{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.esteira-dica{margin:0;color:var(--mute);font-size:.9rem}
+.esteira{overflow:hidden;padding-block:8px 14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.esteira-faixa{display:flex;width:max-content;animation:esteira var(--dur,40s) linear infinite}
+.esteira:hover .esteira-faixa,.esteira.pausada .esteira-faixa{animation-play-state:paused}
+@keyframes esteira{to{transform:translateX(-50%)}}
+.set{display:flex}
+.sk{position:relative;flex:none;inline-size:124px;block-size:142px;margin-inline-end:14px;border-radius:18px;border:1px solid var(--line);background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;padding:20px 8px 0;text-align:center}
+.sk svg{inline-size:44px;block-size:44px;fill:none;stroke:var(--c);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.sk-nome{font-weight:700;font-size:.86rem;line-height:1.2;color:var(--ink)}
+.sk small{color:var(--mute);font-size:.72rem;line-height:1;margin-top:-4px}
+.sk-barra{position:absolute;bottom:12px;left:50%;margin-left:-12px;inline-size:24px;block-size:4px;border-radius:99px;background:var(--c)}
+@media (max-width:640px){.sk{inline-size:108px;block-size:134px;padding-top:16px}.sk svg{inline-size:38px;block-size:38px}}
+@media (prefers-reduced-motion:reduce){
+  .esteira{overflow:visible;-webkit-mask-image:none;mask-image:none}
+  .esteira-faixa{animation:none;width:auto}
+  .set{flex-wrap:wrap;row-gap:14px}
+  .set.dup,.esteira-topo{display:none}
+}
