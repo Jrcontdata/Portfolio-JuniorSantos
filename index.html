@@ -69,9 +69,36 @@ if(typeof FORMACAO!=="undefined"&&FORMACAO.length){
 /* Experiência */
 $("exp").innerHTML=EXPERIENCIAS.map(e=>`<div class="card"><h3>${esc(e.titulo)}</h3>${(e.empresa||e.periodo)?`<p class="meta">${esc([e.empresa,e.periodo].filter(Boolean).join(" · "))}</p>`:""}<p>${esc(e.texto)}</p></div>`).join("");
 
-/* Habilidades */
+/* Habilidades: esteira rolante */
+const ICONES={
+  grade:'<rect x="7" y="9" width="34" height="30" rx="4"/><path d="M7 19h34M7 29h34M19 9v30"/>',
+  banco:'<ellipse cx="24" cy="12" rx="14" ry="5"/><path d="M10 12v24c0 2.8 6.3 5 14 5s14-2.2 14-5V12M10 24c0 2.8 6.3 5 14 5s14-2.2 14-5"/>',
+  grafico:'<path d="M9 40h32"/><rect x="11" y="24" width="7" height="16" rx="1.5"/><rect x="21" y="13" width="7" height="27" rx="1.5"/><rect x="31" y="19" width="7" height="21" rx="1.5"/>',
+  codigo:'<path d="M18 14L7 24l11 10M30 14l11 10-11 10M27 9l-6 30"/>',
+  fluxo:'<circle cx="9" cy="24" r="4"/><rect x="18" y="18" width="12" height="12" rx="2.5"/><path d="M42 24l-5-6-5 6 5 6z"/><path d="M13 24h5M30 24h2"/>',
+  caixa:'<path d="M24 6L7 14v20l17 8 17-8V14z"/><path d="M7 14l17 8 17-8M24 22v20"/>',
+  documento:'<path d="M12 5h17l9 9v29H12z"/><path d="M29 5v9h9M18 25h14M18 32h14"/>',
+  relogio:'<circle cx="24" cy="24" r="17"/><path d="M24 13v11l7 5"/>',
+  caminhao:'<path d="M4 13h25v21H4zM29 21h8l7 8v5H29z"/><circle cx="14" cy="36" r="4"/><circle cx="36" cy="36" r="4"/>',
+  alvo:'<circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="3"/>',
+  monitor:'<rect x="6" y="9" width="36" height="24" rx="3"/><path d="M17 41h14M24 33v8"/>',
+  ciclo:'<path d="M39 20a15 15 0 0 0-27-6M9 28a15 15 0 0 0 27 6"/><path d="M12 5v9h9M36 43v-9h-9"/>',
+  ponto:'<circle cx="24" cy="24" r="10"/>'
+};
 if(typeof HABILIDADES!=="undefined"&&HABILIDADES.length){
-  $("skills").innerHTML=HABILIDADES.map(g=>`<div class="card"><h3>${esc(g.grupo)}</h3><div class="tags">${g.itens.map(i=>`<span class="chip">${esc(i)}</span>`).join("")}</div></div>`).join("");
+  /* aceita o formato novo (nome, icone, cor) e o antigo (grupo, itens) */
+  let lista=[];
+  HABILIDADES.forEach(h=>{ if(h.itens)h.itens.forEach(n=>lista.push({nome:n})); else lista.push(h); });
+  const cardSk=h=>`<div class="sk" style="--c:${esc(h.cor||"var(--acc)")}"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">${ICONES[h.icone]||ICONES.ponto}</svg><span class="sk-nome">${esc(h.nome)}</span>${h.nivel?`<small>${esc(h.nivel)}</small>`:""}<i class="sk-barra"></i></div>`;
+  let base=lista.slice(); while(base.length<10)base=base.concat(lista);
+  const faixa=base.map(cardSk).join("");
+  const box=$("skills"); box.className="esteira-wrap";
+  box.innerHTML=`<div class="esteira-topo"><p class="esteira-dica">Passe o cursor sobre a esteira para pausar.</p><button type="button" class="btn s" id="esteira-btn" aria-pressed="false">Pausar</button></div><div class="esteira" id="esteira" style="--dur:${Math.max(28,base.length*4)}s"><div class="esteira-faixa"><div class="set">${faixa}</div><div class="set dup" aria-hidden="true">${faixa}</div></div></div>`;
+  $("esteira-btn").addEventListener("click",e=>{
+    const p=$("esteira").classList.toggle("pausada");
+    e.currentTarget.textContent=p?"Retomar":"Pausar";
+    e.currentTarget.setAttribute("aria-pressed",p);
+  });
 }else $("habilidades").remove();
 
 /* Cursos */
