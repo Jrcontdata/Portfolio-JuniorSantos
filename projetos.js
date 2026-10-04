@@ -39,9 +39,18 @@ const EXPERIENCIAS = [
 
 /* Habilidades: cada grupo vira um quadro. Liste só o que você de fato domina ou está estudando. */
 const HABILIDADES = [
-  { grupo: "Dados e análise", itens: ["Excel", "SQL", "Power BI", "Python"] },
-  { grupo: "Processos", itens: ["BPMN", "Bizagi"] },
-  { grupo: "Sistemas e áreas", itens: ["SAP S/4HANA", "Recebimento fiscal", "Compras", "PCP (em estudo)"] }
+  { nome: "Excel",             icone: "grade",     cor: "#1f9d62" },
+  { nome: "SQL",               icone: "banco",     cor: "#2f7fd1", nivel: "Em estudo" },
+  { nome: "Power BI",          icone: "grafico",   cor: "#d99a00", nivel: "Em estudo" },
+  { nome: "Python",            icone: "codigo",    cor: "#7b5fd0", nivel: "Em estudo" },
+  { nome: "BPMN",              icone: "fluxo",     cor: "#d4503f" },
+  { nome: "SAP S/4HANA",       icone: "monitor",   cor: "#2a8fb8" },
+  { nome: "Recebimento fiscal",icone: "documento", cor: "#c2562f" },
+  { nome: "Estoque",           icone: "caixa",     cor: "#a5762a" },
+  { nome: "PCP",               icone: "relogio",   cor: "#0f9d8c", nivel: "Em estudo" },
+  { nome: "Logística",         icone: "caminhao",  cor: "#3d6fd9", nivel: "Em estudo" },
+  { nome: "Indicadores",       icone: "alvo",      cor: "#c43d7a", nivel: "Em estudo" },
+  { nome: "Lean e PDCA",       icone: "ciclo",     cor: "#5a9e2d", nivel: "Em estudo" }
 ];
 
 /* -----------------------------------------------------
