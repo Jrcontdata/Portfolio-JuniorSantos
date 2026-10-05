@@ -85,7 +85,7 @@ const ITEMS = [
   etapas:["Diagrama da situação atual feito no Bizagi","Duas raias: Recebimento Fiscal e Logística","Três decisões: pendência na nota, pendências solucionadas e divergência na conferência física","Próximo passo: proposta de melhoria e indicadores"],
   arquivos:[{ texto:"Diagrama em PDF", url:"https://github.com/Jrcontdata/Portfolio-JuniorSantos/blob/main/bpmn-recebimento/recebimento.pdf", tipo:"Diagrama" },
             { texto:"Descrição do processo (README)", url:"https://github.com/Jrcontdata/Portfolio-JuniorSantos/tree/main/bpmn-recebimento", tipo:"Documentação" }] },
-  {,
+  {
     tipo: "case", status: "todo",
     titulo: "Case integrado: do pedido ao estoque",
     descricao: "Fluxo de compras, recebimento e estoque com base de dados simulada, consultas SQL, painel no Power BI e proposta de melhoria do processo.",
