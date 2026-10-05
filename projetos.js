@@ -77,17 +77,15 @@ const CURSOS = [
    etapas:    (opcional) lista que aparece em "Etapas"
    ----------------------------------------------------- */
 const ITEMS = [
-  {
-    tipo: "case", status: "ok",
-    titulo: "Case: recebimento fiscal e importação (BPMN)",
-    descricao: "Mapeamento em BPMN do processo de conferência de nota fiscal contra pedido de compra, usado para liberar o recebimento físico, incluindo o fluxo de importação.",
-    tags: ["BPMN", "Bizagi", "Recebimento", "Compras"],
-    // imagem: "img/bpmn-recebimento.png", alt: "Diagrama BPMN do recebimento fiscal",
-    etapas: ["Diagrama feito no Bizagi", "Próximo passo: versão com melhorias", "Próximo passo: indicadores de divergência e tempo de liberação"],
-    arquivos: []
-    // exemplo: arquivos: [{ texto: "Diagrama em PDF", url: "https://github.com/Jrcontdata/projetos-dados/blob/main/bpmn/recebimento.pdf", tipo: "Diagrama" }]
-  },
-  {
+  { tipo:"case", status:"ok",
+  titulo:"Case: recebimento fiscal de material de consumo (BPMN)",
+  descricao:"Mapeamento em BPMN do processo que executei na indústria farmacêutica: da chegada da nota fiscal à análise do pedido de compra, tratativa de pendências, conferência física e lançamento no ERP. Atuei em todas as etapas, exceto a conferência física, feita pela Logística.",
+  tags:["BPMN","Bizagi","Recebimento fiscal","SAP"],
+  imagem:"img/bpmn-recebimento.png", alt:"Diagrama BPMN do recebimento fiscal de material de consumo",
+  etapas:["Diagrama da situação atual feito no Bizagi","Duas raias: Recebimento Fiscal e Logística","Três decisões: pendência na nota, pendências solucionadas e divergência na conferência física","Próximo passo: proposta de melhoria e indicadores"],
+  arquivos:[{ texto:"Diagrama em PDF", url:"https://github.com/Jrcontdata/Portfolio-JuniorSantos/blob/main/bpmn-recebimento/recebimento.pdf", tipo:"Diagrama" },
+            { texto:"Descrição do processo (README)", url:"https://github.com/Jrcontdata/Portfolio-JuniorSantos/tree/main/bpmn-recebimento", tipo:"Documentação" }] },
+  {,
     tipo: "case", status: "todo",
     titulo: "Case integrado: do pedido ao estoque",
     descricao: "Fluxo de compras, recebimento e estoque com base de dados simulada, consultas SQL, painel no Power BI e proposta de melhoria do processo.",
