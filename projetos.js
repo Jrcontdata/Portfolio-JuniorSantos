@@ -84,7 +84,7 @@ const CURSOS = [
 const ITEMS = [
   { tipo:"case", status:"ok",
   titulo:"Case: recebimento fiscal de material de consumo (BPMN)",
-  descricao:"Mapeamento em BPMN do processo que executei na indústria farmacêutica: da chegada da nota fiscal à análise do pedido de compra, tratativa de pendências, conferência física e lançamento no ERP. Atuei em todas as etapas, exceto a conferência física, feita pela Logística.",
+  descricao:"Mapeamento em BPMN do processo que executei na indústria farmacêutica: da chegada da nota fiscal à análise do pedido de compra, tratativa de pendências, conferência física e lançamento no ERP. Atuei em todas as etapas, exceto a conferência física, o lançamento da conferência no sistema e a assinatura do romaneio, feita pela Logística.",
   tags:["BPMN","Bizagi","Recebimento fiscal","SAP"],
   imagem:"img/bpmn-recebimento.png", alt:"Diagrama BPMN do recebimento fiscal de material de consumo",
   etapas:["Diagrama da situação atual feito no Bizagi","Duas raias: Recebimento Fiscal e Logística","Três decisões: pendência na nota, pendências solucionadas e divergência na conferência física","Próximo passo: proposta de melhoria e indicadores"],
