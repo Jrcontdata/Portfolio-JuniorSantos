@@ -26,31 +26,36 @@ const FORMACAO = [
 ];
 
 const EXPERIENCIAS = [
+    { titulo: "Suporte de usabilidade de sistemas",
+   empresa: "IMPLANTA INFORMÁTICA", periodo: "07/2025 - ATUAL",
+    texto: "Suporte de usabilidade dos sistemas aos clientes, documentação, levantamento de requisitos e interface com a equipe de desenvolvimento na análise de dúvidas e erros no sistema apresentados pelos clientes." },            
   { titulo: "Recebimento fiscal (indústria farmacêutica)",
-    // empresa: "", periodo: "",   // opcional: remova as barras para usar
+   empresa: "EMS PHARMA", periodo: "12/2023 - 07/2025", 
     texto: "Análise de dados de notas fiscais de matéria-prima, embalagem, material de consumo e manutenção e pedidos de compra para liberar o recebimento físico. Interface com time de suprimentos, PCP e Logística. Análise e apresentação de indicadores." },
-  { titulo: "Suporte de usabilidade de sistemas",
-    texto: "Suporte de usabilidade dos sistemas aos clientes, documentação, levantamento de requisitos e interface com a equipe de desenvolvimento na análise de dúvidas e erros no sistema apresentados pelos clientes." },
   { titulo: "Contabilidade",
+   empresa: "GUIMARÃES CONTABILIDADE", periodo: "09/2014 - 07/2023",
     texto: "Análise de dados de notas fiscais, regularização de pendências, lançamento de despesas e receitas." },
   { titulo: "Conferência de mercadorias",
+   empresa: "SUPERMERCADO GOYAZ", periodo: "06/2009 - 04/2012",
     texto: "Análise de dados de notas fiscais, conciliação de quantidades recebidas com nota fiscal, identificação de divergências, organização e controle do estoque." }
 ];
 
 /* Habilidades: cada grupo vira um quadro. Liste só o que você de fato domina ou está estudando. */
 const HABILIDADES = [
-  { nome: "Excel",             icone: "grade",     cor: "#1f9d62" },
-  { nome: "SQL",               icone: "banco",     cor: "#2f7fd1", nivel: "Em estudo" },
-  { nome: "Power BI",          icone: "grafico",   cor: "#d99a00", nivel: "Em estudo" },
-  { nome: "Python",            icone: "codigo",    cor: "#7b5fd0", nivel: "Em estudo" },
-  { nome: "BPMN",              icone: "fluxo",     cor: "#d4503f" },
-  { nome: "SAP S/4HANA",       icone: "monitor",   cor: "#2a8fb8" },
-  { nome: "Recebimento fiscal",icone: "documento", cor: "#c2562f" },
-  { nome: "Estoque",           icone: "caixa",     cor: "#a5762a" },
-  { nome: "PCP",               icone: "relogio",   cor: "#0f9d8c", nivel: "Em estudo" },
-  { nome: "Logística",         icone: "caminhao",  cor: "#3d6fd9", nivel: "Em estudo" },
-  { nome: "Indicadores",       icone: "alvo",      cor: "#c43d7a", nivel: "Em estudo" },
-  { nome: "Lean e PDCA",       icone: "ciclo",     cor: "#5a9e2d", nivel: "Em estudo" }
+  { grupo: "Ferramentas", itens: [
+    { nome: "SAP S/4HANA", icone: "monitor",   cor: "#2a8fb8" },
+    { nome: "Excel",       icone: "grade",     cor: "#1f9d62" },
+    { nome: "Power BI",    icone: "grafico",   cor: "#d99a00" },
+    { nome: "SQL",         icone: "banco",     cor: "#2f7fd1", nivel: "Em estudo" },
+    { nome: "BPMN",        icone: "fluxo",     cor: "#d4503f", nivel: "Em estudo" },
+    { nome: "Python",      icone: "codigo",    cor: "#7b5fd0", nivel: "Em estudo" }
+  ] },
+  { grupo: "Conhecimento de processos", itens: [
+    { nome: "Recebimento fiscal",           icone: "documento", cor: "#c2562f" },
+    { nome: "Fluxo de materiais e compras", icone: "caminhao",  cor: "#3d6fd9" },
+    { nome: "Indicadores",                  icone: "alvo",      cor: "#c43d7a" },
+    { nome: "PCP",                          icone: "relogio",   cor: "#0f9d8c", nivel: "Em estudo" }
+  ] }
 ];
 
 /* -----------------------------------------------------
@@ -103,8 +108,31 @@ const ITEMS = [
     descricao: "Limpeza e análise exploratória de um conjunto de dados de produção.", tags: ["Python", "pandas", "Gráficos"], arquivos: [] },
   { tipo: "processo", status: "wip", titulo: "Modelagem de processos com BPMN",
     descricao: "Como mapear, medir e melhorar fluxos, com exemplos de recebimento e compras.", tags: ["BPMN", "Bizagi", "Situação atual e futura"], arquivos: [] },
-  { tipo: "industria", status: "wip", titulo: "Fundamentos de PCP",
-    descricao: "Planejamento da demanda, MRP, estoque de segurança e programação da produção.", tags: ["PCP", "MRP", "Lead time"], arquivos: [] },
+   { tipo: "industria", status: "ok",
+    titulo: "Painel de cobertura e ponto de pedido de materiais",
+    descricao: "Projeto de estudo em planejamento de materiais, com dados totalmente fictícios. Painel em Excel que calcula cobertura, ponto de pedido, folga e situação (pedir agora, atenção ou OK) de 10 insumos e sugere quanto pedir, na lógica de reposição por consumo. Não considera pedidos em aberto, material em trânsito, quarentena e perdas.",
+    aprendizado: "O estoque de segurança pode fazer um material entrar em “pedir agora” mesmo com cobertura maior que o lead time.",
+    tags: ["Excel", "Estoque", "Ponto de pedido", "Lead time", "SAP"],
+    imagens: [
+      { src: "img/painel-cobertura.png",
+        alt: "Painel em Excel com 10 materiais fictícios, mostrando cobertura, ponto de pedido e situação por cor.",
+        legenda: "painel" },
+      { src: "img/grafico-cobertura.png",
+        alt: "Gráfico de colunas comparando a cobertura e o lead time, em dias, de 10 materiais fictícios.",
+        legenda: "gráfico de cobertura x lead time" }
+    ],
+    etapas: [
+      "Defini 10 insumos fictícios, com estoque, consumo por dia, lead time e estoque de segurança.",
+      "Calculei a cobertura (estoque ÷ consumo por dia) e o ponto de pedido (consumo × lead time + estoque de segurança).",
+      "Classifiquei cada material como pedir agora, atenção ou OK e calculei a folga (cobertura − lead time).",
+      "Calculei a quantidade sugerida a pedir e montei um gráfico de cobertura contra lead time."
+    ],
+    arquivos: [
+      { texto: "Planilha do painel, dados fictícios",
+        url: "https://github.com/Jrcontdata/Portfolio-JuniorSantos/raw/main/pcp-cobertura/painel_cobertura_ponto_de_pedido.xlsx",
+        tipo: "Excel" }
+    ]
+  },
   { tipo: "industria", status: "todo", titulo: "Indicadores industriais: OEE, OTIF e giro",
     descricao: "O que cada indicador mede, como calcular e como interpretar.", tags: ["OEE", "OTIF", "Indicadores"], arquivos: [] },
   { tipo: "industria", status: "todo", titulo: "Lean e melhoria contínua",
