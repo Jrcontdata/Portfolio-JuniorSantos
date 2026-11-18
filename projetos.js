@@ -8,9 +8,9 @@ const PERFIL = {
   nome: "Junior Rabelo dos Santos",
   titulo: "Processos e Operações Industriais | Análise de Dados | Planejamento e Controle",
   resumo: [
-    "Formado em Ciências Contábeis, com experiência em controle de estoque, rotinas fiscais, recebimento fiscal na indústria farmacêutica e suporte funcional a sistemas.",
-    "Minha trajetória reúne análise de informações, organização de processos e atuação próxima às operações. Na indústria, utilizei SAP S/4HANA, analisei notas fiscais e pedidos de compra, acompanhei indicadores e trabalhei em interface com PCP, Suprimentos e Logística.",
-    "Atualmente, aprofundo meus conhecimentos em PCP, análise de dados e melhoria de processos para ampliar minha atuação no planejamento, controle e eficiência das operações industriais."
+    "Gosto de entender como as operações funcionam por dentro: de onde vem cada número, onde o processo trava e o que os dados indicam para a próxima decisão.",
+    "Formado em Ciências Contábeis, construí essa visão em diferentes pontas da operação: na conferência de mercadorias e no controle de estoque, no recebimento fiscal da indústria farmacêutica com SAP S/4HANA, confrontando notas e pedidos de compra em interface com PCP, Suprimentos e Logística, e hoje no suporte funcional a sistemas, analisando inconsistências e documentando processos.",
+    "Neste portfólio, reúno estudos em que aplico análise de dados e mapeamento de processos a problemas reais de estoque, materiais e planejamento."
   ],
   vagas: ["Planejamento e controle", "Estoque e logística", "Análise de dados aplicada a operações"],
   foto: "",
