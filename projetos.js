@@ -6,7 +6,7 @@
 
 const PERFIL = {
   nome: "Junior Rabelo dos Santos",
-  titulo: "Processos e Operações Industriais | Análise de Dados | Planejamento e Controle",
+  titulo: "Suporte e Treinamento de Usuários | Estoque e Recebimento | Análise de Dados aplicada a Operações"
   resumo: [
     "Gosto de entender como as operações funcionam por dentro: de onde vem cada número, onde o processo trava e o que os dados indicam para a próxima decisão.",
     "Formado em Ciências Contábeis, construí essa visão em diferentes pontas da operação: na conferência de mercadorias e no controle de estoque, no recebimento fiscal da indústria farmacêutica com SAP S/4HANA, confrontando notas e pedidos de compra em interface com PCP, Suprimentos e Logística, e hoje no suporte funcional a sistemas, analisando inconsistências e documentando processos.",
@@ -14,7 +14,7 @@ const PERFIL = {
   ],
   vagas: ["Planejamento e controle", "Estoque e logística", "Análise de dados aplicada a operações"],
   foto: "",
-  local: "Luziânia-GO. Disponível para oportunidades presenciais ou híbridas na região.",
+  local: "Luziânia-GO.",
   email: "jr.contdata.ti@gmail.com",
   linkedin: "https://www.linkedin.com/in/junior-santos-47a08662/",
   github: "https://github.com/Jrcontdata"
@@ -74,8 +74,12 @@ const HABILIDADES = [
    imagem e url são opcionais (imagem do certificado em img/, url do certificado ou da credencial)
    ----------------------------------------------------- */
 const CURSOS = [
-  // { nome: "Nome do curso", instituicao: "Instituição", ano: "2026", carga: "40 h",
-  //   status: "concluido", imagem: "img/certificado-sql.png", alt: "Certificado do curso", url: "https://..." },
+  { nome: "Controlador e Programador de Produção", instituicao: "SENAI Gama", status: "concluido" },
+  { nome: "Logística: Conceitos e Aplicações", instituicao: "SEST SENAT", status: "concluido" },
+  { nome: "Análise de Dados", instituicao: "Hashtag Treinamentos", status: "andamento" },
+  { nome: "Introdução ao Business Intelligence", instituicao: "Udemy", status: "concluido" },
+  { nome: "Fundamentos de Análise de Dados", instituicao: "LinkedIn Learning", status: "concluido" },
+  { nome: "Descubra SQL", instituicao: "LinkedIn Learning", status: "concluido" }
 ];
 
 /* -----------------------------------------------------
