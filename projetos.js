@@ -12,7 +12,7 @@ const PERFIL = {
     "Minha trajetória reúne análise de informações, organização de processos e atuação próxima às operações. Na indústria, utilizei SAP S/4HANA, analisei notas fiscais e pedidos de compra, acompanhei indicadores e trabalhei em interface com PCP, Suprimentos e Logística.",
     "Atualmente, aprofundo meus conhecimentos em PCP, análise de dados e melhoria de processos para ampliar minha atuação no planejamento, controle e eficiência das operações industriais."
   ],
-  vagas: ["Analista de PCP Jr", "Analista de Logística Jr", "Analista Industrial Jr", "Analista de Produção Jr"],
+  vagas: ["Analista de PCP Jr", "Analista de dados jr", "Analista de Logística Jr", "Analista Industrial Jr", "Analista de Produção Jr"],
   foto: "",
   local: "Luziânia-GO. Disponível para oportunidades presenciais ou híbridas na região.",
   email: "jr.contdata.ti@gmail.com",
