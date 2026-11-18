@@ -22,7 +22,7 @@ const PERFIL = {
 
 const FORMACAO = [
   { curso: "Ciências Contábeis", instituicao: "", periodo: "Concluído" },
-  { curso: "Técnico em Logística", instituicao: "", periodo: "Em andamento" }
+  { curso: "Técnico em Logística", instituicao: "SENAI Gama", periodo: "Em andamento" }
 ];
 
 const EXPERIENCIAS = [
@@ -90,6 +90,26 @@ const CURSOS = [
    etapas:    (opcional) lista que aparece em "Etapas"
    ----------------------------------------------------- */
 const ITEMS = [
+  { tipo: "ferramenta", status: "ok",
+    titulo: "Controle de estoque — curva ABC, cobertura e acuracidade",
+    descricao: "Estudo com 30 itens fictícios de um CD de produtos de limpeza. Em Excel, classifiquei os itens pela curva ABC, calculei giro e cobertura, identifiquei rupturas e excessos, medi a acuracidade de uma contagem cíclica e a produtividade da separação, com painel filtrável por classe.",
+    aprendizado: "Todas as divergências de inventário fora da tolerância estavam na classe A, justamente onde o erro custa mais. Isso reforça contar os itens A com mais frequência.",
+    tags: ["Excel", "Curva ABC", "Acuracidade", "Cobertura", "Tabela dinâmica"],
+    imagens: [
+      { src: "img/painel-estoque-abc.png", alt: "Painel em Excel com indicadores de estoque filtráveis por classe ABC.", legenda: "painel" },
+      { src: "img/pareto-abc.png", alt: "Gráfico de Pareto com valor consumido e percentual acumulado de 30 itens.", legenda: "curva ABC" }
+    ],
+    etapas: [
+      "Tratei a base com ARRUMAR e PRI.MAIÚSCULA e calculei o valor consumido no trimestre.",
+      "Classifiquei os itens em A, B e C pelo percentual acumulado (80% / 95%).",
+      "Calculei cobertura em dias e giro, e sinalizei ruptura (menos de 15 dias) e excesso (mais de 50).",
+      "Medi a acuracidade da contagem cíclica com tolerância por classe e o valor das divergências.",
+      "Montei painel com seletor de classe, gráficos e conclusões."
+    ],
+    arquivos: [
+      { texto: "Planilha do projeto, dados fictícios", url: "https://github.com/Jrcontdata/Portfolio-JuniorSantos/raw/main/estoque-abc/controle_estoque_abc.xlsx", tipo: "Excel" }
+    ]
+  },
   { tipo:"case", status:"ok",
   titulo:"Mapeamento do recebimento fiscal — BPMN",
   descricao:"Mapeamento em BPMN do processo que executei na indústria farmacêutica: da chegada da nota fiscal à análise do pedido de compra, tratativa de pendências, conferência física e lançamento no ERP. Atuei em todas as etapas, exceto a conferência física, o lançamento da conferência no sistema e a assinatura do romaneio, feita pela Logística.",
@@ -122,7 +142,14 @@ const ITEMS = [
         url: "https://github.com/Jrcontdata/Portfolio-JuniorSantos/raw/main/pcp-cobertura/painel_cobertura_ponto_de_pedido.xlsx",
         tipo: "Excel" }
     ]
-  },
+  }
+];
+
+/* =====================================================
+   PROJETOS GUARDADOS (ocultos no site)
+   Para mostrar um de novo: recorte o bloco { ... } daqui,
+   cole dentro da lista ITEMS acima e confira as vírgulas.
+   =====================================================
 
   {
     tipo: "case", status: "todo",
@@ -132,8 +159,6 @@ const ITEMS = [
     etapas: ["Modelagem do processo", "Base simulada e consultas SQL", "Painel: prazo de entrega, divergências e giro", "Conclusões e recomendações"],
     arquivos: []
   },
-  { tipo: "ferramenta", status: "wip", titulo: "Excel: controle de estoque e curva ABC",
-    descricao: "Planilha com classificação ABC, estoque de segurança e ponto de pedido.", tags: ["Excel", "Estoque", "Tabela dinâmica"], arquivos: [] },
   { tipo: "ferramenta", status: "wip", titulo: "SQL: consultas sobre pedidos e estoque",
     descricao: "Consultas para cruzar pedidos, notas e itens e identificar divergências.", tags: ["SQL", "JOIN", "Agregações"], arquivos: [] },
   { tipo: "ferramenta", status: "todo", titulo: "Power BI: painel logístico",
@@ -146,4 +171,5 @@ const ITEMS = [
     descricao: "O que cada indicador mede, como calcular e como interpretar.", tags: ["OEE", "OTIF", "Indicadores"], arquivos: [] },
   { tipo: "industria", status: "todo", titulo: "Lean e melhoria contínua",
     descricao: "Desperdícios, 5S e ciclo PDCA aplicados a recebimento e armazenagem.", tags: ["Lean", "5S", "PDCA"], arquivos: [] }
-];
+
+*/
