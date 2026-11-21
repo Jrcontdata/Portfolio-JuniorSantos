@@ -8,7 +8,7 @@ const PERFIL = {
   nome: "Junior Rabelo dos Santos",
   titulo: "Suporte e Treinamento de Usuários | Estoque e Recebimento | Análise de Dados aplicada a Operações",
   resumo: [
-    "Gosto de entender como as operações funcionam, compreender o fluxo, contribuir para o bom andamento do processo a fim de chegar ao resultado esperado. Busco ente de onde vem cada número, onde o processo trava, analisar os possiveis gargalos, traçar soluções e melhorias e analisar dados para subsidiar os gestores na tomada de decisão.",
+    "Gosto de entender como as operações funcionam, compreender o fluxo, contribuir para o bom andamento do processo a fim de chegar ao resultado esperado. Busco entender de onde vem cada número, onde o processo trava, analisar os possiveis gargalos, traçar soluções e melhorias e analisar dados para subsidiar os gestores na tomada de decisão.",
     "Formado em Ciências Contábeis, construí essa visão em diferentes pontas da operação: na conferência de mercadorias e no controle de estoque, no recebimento fiscal da indústria farmacêutica com SAP S/4HANA, confrontando notas e pedidos de compra em interface com PCP, Suprimentos e Logística, e hoje no suporte funcional a sistemas, analisando inconsistências e documentando processos.",
     "Neste portfólio, reúno estudos em que aplico análise de dados e mapeamento de processos a problemas reais de estoque, materiais e planejamento."
   ],
